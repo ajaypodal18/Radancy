@@ -1,0 +1,278 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 35px 40px;
+}
+header img {
+  width: 230px;
+  display: block;
+}
+@media (max-width: 600px) {
+  header {
+    text-align: center;
+  }
+  header img {
+    margin: 0 auto;
+  }
+}
+
+.hero {
+  background: url("./assets/images/hero.png") no-repeat center;
+  background-size: cover;
+  height: 69vh;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+}
+@media (max-width: 425px) {
+  .hero {
+    background: url("./assets/images/hero-mobile.png") no-repeat center;
+    background-size: cover;
+    height: 45vh;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero {
+    margin-bottom: -20px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    margin-bottom: -10px;
+  }
+}
+
+.main-cnt {
+  padding: 5px 35px;
+}
+.main-cnt #head-txt {
+  font-weight: lighter;
+  color: #00945f;
+  position: relative;
+  width: 310px;
+  margin: 40px auto 30px auto;
+  text-align: center;
+}
+.main-cnt #head-txt::after {
+  content: "";
+  width: 70px;
+  height: 1.6px;
+  background-color: #00945f;
+  position: absolute;
+  bottom: -15px;
+  right: 122px;
+}
+@media (max-width: 600px) {
+  .main-cnt #head-txt {
+    width: 100%;
+    font-size: 28px;
+  }
+  .main-cnt #head-txt::after {
+    left: 50%;
+    transform: translateX(-50%);
+    right: unset;
+  }
+}
+.main-cnt p {
+  color: #888;
+  line-height: 30px;
+}
+.main-cnt .inst button {
+  display: block;
+  margin: 2em auto;
+  background-color: #e97300;
+  border: none;
+  padding: 5px 20px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+.main-cnt .adva {
+  margin: 30px 0 50px;
+}
+@media (max-width: 600px) {
+  .main-cnt .adva {
+    margin-bottom: 20px;
+  }
+}
+.main-cnt .adva .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5em 6em;
+  margin-top: 3em;
+}
+.main-cnt .adva .container h3 {
+  color: #00945f;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .main-cnt .adva .container h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+}
+.main-cnt .adva .container .grid-cnt {
+  position: relative;
+  padding-bottom: 2em;
+}
+.main-cnt .adva .container .grid-cnt:nth-child(1)::after, .main-cnt .adva .container .grid-cnt:nth-child(3)::after {
+  content: "";
+  width: 1px;
+  height: 90%;
+  background-color: #ccc;
+  position: absolute;
+  right: -40px;
+  top: 6px;
+}
+@media (max-width: 600px) {
+  .main-cnt .adva .container .grid-cnt {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  .main-cnt .adva .container .grid-cnt::after {
+    content: none !important;
+  }
+  .main-cnt .adva .container .grid-cnt:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 600px) {
+  .main-cnt .adva .container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+.main-cnt #loan {
+  text-align: center;
+  color: white;
+  background-color: #00945f;
+  font-weight: lighter;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .main-cnt #loan {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+.main-cnt #loan-dt {
+  padding: 25px 60px;
+  background-color: rgba(0, 148, 95, 0.0588235294);
+}
+@media (max-width: 600px) {
+  .main-cnt #loan-dt {
+    padding: 10px 10px;
+  }
+}
+.main-cnt .officers {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10em;
+  padding: 2em 6em;
+  margin: 2em auto 4em auto;
+  text-align: center;
+}
+.main-cnt .officers .Officer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-cnt .officers .Officer-card .quote {
+  position: relative;
+  z-index: 1;
+  margin: 1em 0;
+}
+.main-cnt .officers .Officer-card .quote::before {
+  content: "“";
+  font-size: 160px;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: -22px;
+  left: -23px;
+  z-index: 0;
+  font-family: Georgia, serif;
+  pointer-events: none;
+}
+.main-cnt .officers .Officer-card img {
+  width: 140px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 600px) {
+  .main-cnt .officers .Officer-card img {
+    width: 160px;
+  }
+}
+.main-cnt .officers .Officer-card q {
+  font-style: italic;
+  color: #666;
+  line-height: 1.7;
+  margin: 1em 0;
+  position: relative;
+  z-index: 1;
+}
+.main-cnt .officers .Officer-card p {
+  color: #00945f;
+  text-align: center;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main-cnt .officers {
+    gap: 5em;
+    padding: 2em 5em;
+  }
+}
+@media (max-width: 768px) {
+  .main-cnt .officers {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3em;
+    padding: 1em 2em;
+  }
+}
+@media (max-width: 600px) {
+  .main-cnt .officers {
+    grid-template-columns: 1fr;
+    gap: 3em;
+    padding: 1em 2em;
+  }
+}
+@media (max-width: 600px) {
+  .main-cnt {
+    padding: 5px 20px;
+  }
+}
+
+footer {
+  border-top: 1px solid #00945f;
+  padding: 40px 35px;
+}
+footer .footer-txt {
+  margin: 20px 0;
+  line-height: 18px;
+  font-size: 12px;
+  color: #888;
+}
+footer .foot-lst {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.637);
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 20px;
+  }
+}
+footer a.link-txt {
+  color: #888;
+}/*# sourceMappingURL=style.css.map */
